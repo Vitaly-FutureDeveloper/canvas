@@ -2,10 +2,6 @@
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');
 
-	var SMILE_CENTER_X = 320;
-	var SMILE_CENTER_Y = 240;
-	var SMILE_RADIUS = 180;
-
 	ctx.beginPath();
 		ctx.strokeStyle = "rgb(180, 150, 25)";
 		ctx.lineWidth = 2;
@@ -18,10 +14,11 @@
 	/*
 	//Eyes >>
 	*/
+		ctx.lineWidth = 15;
+		ctx.strokeStyle = "black";
+		ctx.fillStyle = "red";
 	//left eye
 	ctx.beginPath();
-		ctx.strokeStyle = "black";
-		ctx.lineWidth = 15;
 			ctx.moveTo(SMILE_CENTER_X - 130, SMILE_CENTER_Y - 80);
 			ctx.lineTo(SMILE_CENTER_X - 35, SMILE_CENTER_Y - 70);
 
@@ -29,13 +26,12 @@
 			ctx.bezierCurveTo(SMILE_CENTER_X - 110, SMILE_CENTER_Y - 50, 
 				SMILE_CENTER_X - 55, SMILE_CENTER_Y - 40, 
 				SMILE_CENTER_X - 55, SMILE_CENTER_Y - 70);
+			ctx.fill();
 	ctx.stroke();
 	ctx.closePath();
 
 	//right eye
 	ctx.beginPath();
-		ctx.strokeStyle = "black";
-		ctx.lineWidth = 15;
 			ctx.moveTo(SMILE_CENTER_X + 130, SMILE_CENTER_Y - 80);
 			ctx.lineTo(SMILE_CENTER_X + 35, SMILE_CENTER_Y - 70);
 
@@ -43,6 +39,7 @@
 			ctx.bezierCurveTo(SMILE_CENTER_X + 110, SMILE_CENTER_Y - 50, 
 				SMILE_CENTER_X + 55, SMILE_CENTER_Y - 40, 
 				SMILE_CENTER_X + 55, SMILE_CENTER_Y - 70);
+			ctx.fill();
 	ctx.stroke();
 	ctx.closePath();
 	/*
@@ -59,4 +56,7 @@
 	ctx.stroke();
 	ctx.closePath();
 
+
+
 })();
+

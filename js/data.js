@@ -1,0 +1,8 @@
+/*
+// GLOBAL VARIABLES
+*/
+
+
+var SMILE_CENTER_X = 320;
+var SMILE_CENTER_Y = 240;
+var SMILE_RADIUS = 180;
